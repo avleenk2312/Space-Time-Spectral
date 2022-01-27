@@ -1,14 +1,16 @@
 %Unsteady Navier-Stokes Jacobi Collocation
+%requires my function globattojacbD(n,al,be) uploaded in the same repository
 
 
 clc
 close all
-clear all
+clearvars
 
-al=0;
+%alpha and beta for Jacobi polynomial, alpha=beta=0 for Legendre, alpha=beta=-0.5 for Chebyshev
+al=0; 
 be=0;
 
-nv=(6:2:12);
+nv=(6:2:12); %vector for values of n=the discretization parameter
 nn=size(nv,2);
 error=zeros(3,size(nv,2));
 

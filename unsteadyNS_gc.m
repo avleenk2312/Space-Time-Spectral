@@ -1,6 +1,7 @@
 %Galerkin Method for unsteady- Navier-Stokes
 %P_{N}-P_{N-2} Stokes problem
 %chebyshev gauss Lobatto in time!
+%reuires: gnodesjacobi, globattojacbD functions in this repository
 
 clear all
 close all

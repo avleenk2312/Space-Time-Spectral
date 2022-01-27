@@ -286,6 +286,8 @@ end
 
 end
 
+%the following function tp calculates integral  product of Legendre functions L_k,L_l^{\prime},L_m on (-1,1)
+%which is done by using expansion of derivative of L_l in terms of its preceding polynomials
 function d=tdp(k,l,m)
 d=0;
 
@@ -295,7 +297,10 @@ d=0;
   
 end
 
-function p=tp(k,l,m)
+
+%the following function tp calculates integral  product of three Legendre functions L_k,L_l,L_m on (-1,1)
+%which is 2*square of 3j expression with first row as k,l,m and second row of zeros 
+function p=tp(k,l,m) 
 p=0;
 if (mod(k+l+m,2)==0 && abs(k-l)<=m ) && m<=k+l
     s=(k+l+m)/2;
